@@ -25,7 +25,7 @@
                     @csrf
                     <div class="form-group form-row">
                          <div class="col-md-6">
-                            <label for="name">{{__('client_id')}}</label>
+                            <label for="name">{{__('nombre')}}</label>
                             <select name="client_id" id="client_id" class="form-control @error('name') is-invalid @enderror">
 
                                 @foreach($clients as $client)

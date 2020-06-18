@@ -31,8 +31,8 @@ class LoansController extends Controller
     public function create()
 
     {
-        return view('loans.create');
-
+        $clients = client::all();
+         return view('loans.create',compact('clients'));
         //
     }
 
