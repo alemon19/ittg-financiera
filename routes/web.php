@@ -29,3 +29,9 @@ Route::post('/clients', 'ClientsController@store')
     ->name('clients.store');
 Route::delete('/clients/{id}', 'ClientsController@destroy')
     ->name('clients.destroy');
+
+Route::get('/loans', 'LoansController@index')
+  	->name('loans.index');
+
+  	Route::get('/loans/new','LoansController@create')
+  	->name('loans.create');

@@ -35,7 +35,14 @@
                                 {{ __('Clients') }}
                             </a>
                         </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('loans.index') }}">
+                                {{ __('Loans') }}
+                            </a>
+                        </li> 
+
                     </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

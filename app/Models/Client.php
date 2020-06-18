@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class client extends Model
 {
     protected $fillable = [
-        'name', 'phone', 'address',
+        'id','name', 'phone', 'address',
     ];
+
+   public function loan()
+    {
+        return $this->hasOne(loan::class);
+    }
 }
