@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\loan;
+use App\Http\Controllers\Controller;
+use App\Models\client;
 
 class LoansController extends Controller
 {
@@ -26,7 +29,10 @@ class LoansController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+
     {
+        return view('loans.create');
+
         //
     }
 
@@ -38,6 +44,36 @@ class LoansController extends Controller
      */
     public function store(Request $request)
     {
+
+
+        $request->validate([
+            'client_id' => 'required',
+             'cantidad' => 'required',
+              'nopago' => 'required',
+               'cuota' => 'required',
+                'totalpagar' => 'required',
+                 'fechaministracion' => 'required',
+                  'fechavencimiento' => 'required',
+        ]);
+
+
+
+
+        loan::create([
+            'client_id' => $request->input('client_id'),
+            'cantidad' => $request->input('cantidad'),
+            'nopago' => $request->input('nopago'),
+            'cuota' => $request->input('cuota'),
+            'totalpagar' => $request->input('totalpagar'),
+            'fechaministracion' => $request->input('fechaministracion'),
+            'fechavencimiento' => $request->input('fechavencimiento'),
+
+        ]);
+
+         return redirect()->route('loans.index');
+    
+
+
         //
     }
 

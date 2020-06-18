@@ -35,3 +35,5 @@ Route::get('/loans', 'LoansController@index')
 
   	Route::get('/loans/new','LoansController@create')
   	->name('loans.create');
+  	Route::post('/loans', 'LoansController@store')
+    ->name('loans.store');
