@@ -41,3 +41,6 @@ Route::get('/loans', 'LoansController@index')
     Route::delete('loans/{id}','LoansController@destroy')
     ->name('loans.destroy');
 
+
+Route::view('/form','subir');
+
