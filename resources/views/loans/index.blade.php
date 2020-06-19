@@ -72,3 +72,41 @@
     </div>
 </div>
 @endsection
+@section('bottom-js')
+<script>
+     $('body').on('click', '.btn-delete', function(event) {
+        const id = $(this).data('id');
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: 'No podrás revertir esta acción',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, borralo!'
+        })
+        .then((result) => {
+            if (result.value) {
+                axios.delete('{{ route('loans.index') }}/' + id)
+                    .then(result => {
+                        Swal.fire({
+                            title: 'Borrado',
+                            text: 'El cliente a sido borrado',
+                            icon: 'success'
+                        }).then(() => {
+                            window.location.href='{{ route('loans.index') }}';
+                        });
+                    })
+                    .catch(error => {
+                        Swal.fire(
+                            'Ocurrió un error',
+                            'El cliente no ha podido borrarse.',
+                            'error'
+                        );
+                    });
+
+            }
+        });
+    });
+</script>
+@endsection

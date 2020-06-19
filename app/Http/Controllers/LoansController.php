@@ -18,8 +18,8 @@ class LoansController extends Controller
     {
         //
 
-         return view('loans.index');
-        
+       $loans =loan::all();
+         return view('loans.index', ['loans' => $loans,]);
 
     }
 
@@ -119,6 +119,10 @@ class LoansController extends Controller
      */
     public function destroy($id)
     {
+        $loan = loan::find($id);
+
+        $loan->delete();
+        return $loan;
         //
     }
 }

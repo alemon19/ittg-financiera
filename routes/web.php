@@ -38,3 +38,6 @@ Route::get('/loans', 'LoansController@index')
   	->name('loans.create');
   	Route::post('/loans', 'LoansController@store')
     ->name('loans.store');
+    Route::delete('loans/{id}','LoansController@destroy')
+    ->name('loans.destroy');
+
