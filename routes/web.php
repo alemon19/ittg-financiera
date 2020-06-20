@@ -42,5 +42,10 @@ Route::get('/loans', 'LoansController@index')
     ->name('loans.destroy');
 
 
-Route::view('/form','subir');
+Route::view('/form','subir')
+->name('subir.index');
+Route::post('/upload','ClientsController@import');  
+Route::post('/import','ClientsController@import'); 
+
+
 

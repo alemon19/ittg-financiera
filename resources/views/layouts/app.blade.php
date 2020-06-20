@@ -41,6 +41,13 @@
                             </a>
                         </li> 
 
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('subir.index') }}">
+                                {{ __('subir') }}
+                            </a>
+                        </li> 
+
                     </ul>
 
 
