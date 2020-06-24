@@ -12,5 +12,27 @@
             </v-list-item-icon> -->
             <v-list-item-title>About</v-list-item-title>
         </v-list-item>
+
+        <v-list-item dark to="/clients">
+            <!-- <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+            </v-list-item-icon> -->
+            <v-list-item-title>Clients</v-list-item-title>
+        </v-list-item>
+
+         <v-list-item dark to="/loans">
+            <!-- <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+            </v-list-item-icon> -->
+            <v-list-item-title>Loans</v-list-item-title>
+            </v-list-item>
+
+            <v-list-item dark to="/exportacion">
+            <!-- <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+            </v-list-item-icon> -->
+            <v-list-item-title>Exportacion</v-list-item-title>
+        </v-list-item>
+
     </v-list>
 </template>
