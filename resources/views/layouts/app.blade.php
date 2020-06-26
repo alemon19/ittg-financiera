@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('loans.index') }}">
+                            <a class="nav-link" href="{{ route('export.index') }}">
                                 {{ __('Loans') }}
                             </a>
                         </li> 
@@ -45,6 +45,11 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ route('subir.index') }}">
                                 {{ __('subir') }}
+                            </a>
+                        </li> 
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ route('subir.index') }}">
+                                {{ __('exportar') }}
                             </a>
                         </li> 
 

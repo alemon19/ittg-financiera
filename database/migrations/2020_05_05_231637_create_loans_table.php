@@ -17,6 +17,13 @@ class CreateLoansTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('client_id');
+            $table->string('cantidad');
+            $table->string('nopago');
+            $table->string('cuota');
+            $table->string('totalpagar');
+            $table->string('fechaministracion');
+            $table->string('fechavencimiento');
+            
 
             $table->timestamps();
 

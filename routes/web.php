@@ -45,7 +45,11 @@ Route::get('/loans', 'LoansController@index')
 Route::view('/form','subir')
 ->name('subir.index');
 Route::post('/upload','ClientsController@import');  
-Route::post('/import','ClientsController@import'); 
+Route::post('/import','ClientsController@import');
+
+Route::post('/export','ClientsController@export')
+->name('export.index');
+
 
 
 
