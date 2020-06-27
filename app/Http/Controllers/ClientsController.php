@@ -6,7 +6,8 @@ use App\Models\Client;
 use Illuminate\Http\Request;
 use App\Exports\ClientsExport;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\ClietsImport;
+use App\Imports\ClientsImport;
+
 
 
 class ClientsController extends Controller
@@ -109,13 +110,14 @@ class ClientsController extends Controller
     {
         Excel::import(new ClientsImport, $request->file('lista'));
         
-        return redirect('/')->with('success', 'All good!');
+        return redirect('/clients')->with('success', 'All good!');
     }
+
     public function export() 
     {
-        return Excel::download(new UsersExport, 'users.xlsx');
+        return Excel::download(new ClientsExport, 'users.xlsx');
     }
-}
+
 
 }
 
