@@ -13,7 +13,7 @@
 
 <template v-slot:top>
       <v-toolbar flat color="white">
-        <v-toolbar-title>My CRUD</v-toolbar-title>
+        <v-toolbar-title>CLIENTES</v-toolbar-title>
         <v-divider
           class="mx-4"
           inset
@@ -28,7 +28,7 @@
               class="mb-2"
               v-bind="attrs"
               v-on="on"
-            >New Item</v-btn>
+            >New Client</v-btn>
           </template>
           <v-card>
             <v-card-title>
@@ -39,17 +39,15 @@
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.id" label="Dessert name"></v-text-field>
+                    <v-text-field v-model="editedItem.id" label="name"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.name" label="Calories"></v-text-field>
+                    <v-text-field v-model="editedItem.name" label="phone"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.phone" label="Fat (g)"></v-text-field>
+                    <v-text-field v-model="editedItem.phone" label="address"></v-text-field>
                   </v-col>
-                  <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.adress" label="Carbs (g)"></v-text-field>
-                  </v-col>
+                  
                   
                 </v-row>
               </v-container>
@@ -117,16 +115,16 @@
       editedIndex: -1,
       editedItem: {
         id: '',
-        name: 0,
-        phone: 0,
-        address: 0,
+        name: '',
+        phone: '',
+        address: '',
        
       },
       defaultItem: {
         id: '',
-        name: 0,
-        phone: 0,
-        address: 0,
+        name: '',
+        phone: '',
+        address: '',
        
       },
     }),

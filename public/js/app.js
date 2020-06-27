@@ -2100,8 +2100,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2130,15 +2128,15 @@ __webpack_require__.r(__webpack_exports__);
       editedIndex: -1,
       editedItem: {
         id: '',
-        name: 0,
-        phone: 0,
-        address: 0
+        name: '',
+        phone: '',
+        address: ''
       },
       defaultItem: {
         id: '',
-        name: 0,
-        phone: 0,
-        address: 0
+        name: '',
+        phone: '',
+        address: ''
       }
     };
   },
@@ -21475,7 +21473,7 @@ var render = function() {
               "v-toolbar",
               { attrs: { flat: "", color: "white" } },
               [
-                _c("v-toolbar-title", [_vm._v("My CRUD")]),
+                _c("v-toolbar-title", [_vm._v("CLIENTES")]),
                 _vm._v(" "),
                 _c("v-divider", {
                   staticClass: "mx-4",
@@ -21509,7 +21507,7 @@ var render = function() {
                                 ),
                                 on
                               ),
-                              [_vm._v("New Item")]
+                              [_vm._v("New Client")]
                             )
                           ]
                         }
@@ -21550,7 +21548,7 @@ var render = function() {
                                       },
                                       [
                                         _c("v-text-field", {
-                                          attrs: { label: "Dessert name" },
+                                          attrs: { label: "name" },
                                           model: {
                                             value: _vm.editedItem.id,
                                             callback: function($$v) {
@@ -21574,7 +21572,7 @@ var render = function() {
                                       },
                                       [
                                         _c("v-text-field", {
-                                          attrs: { label: "Calories" },
+                                          attrs: { label: "phone" },
                                           model: {
                                             value: _vm.editedItem.name,
                                             callback: function($$v) {
@@ -21598,7 +21596,7 @@ var render = function() {
                                       },
                                       [
                                         _c("v-text-field", {
-                                          attrs: { label: "Fat (g)" },
+                                          attrs: { label: "address" },
                                           model: {
                                             value: _vm.editedItem.phone,
                                             callback: function($$v) {
@@ -21609,30 +21607,6 @@ var render = function() {
                                               )
                                             },
                                             expression: "editedItem.phone"
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "v-col",
-                                      {
-                                        attrs: { cols: "12", sm: "6", md: "4" }
-                                      },
-                                      [
-                                        _c("v-text-field", {
-                                          attrs: { label: "Carbs (g)" },
-                                          model: {
-                                            value: _vm.editedItem.adress,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.editedItem,
-                                                "adress",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "editedItem.adress"
                                           }
                                         })
                                       ],
