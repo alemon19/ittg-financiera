@@ -2,7 +2,7 @@
 
 namespace App\Imports;
 
-use App\Clients;
+use App\Models\Client;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class ClientsImport implements ToModel
@@ -14,8 +14,11 @@ class ClientsImport implements ToModel
     */
     public function model(array $row)
     {
-        return new Clients([
-            //
-        ]);
+        return new Client([
+           'name'     => $row[1],
+           'phone'    => $row[2], 
+           'address'    => $row[3], 
+           
+       ]);
     }
 }
