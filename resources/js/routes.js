@@ -41,12 +41,7 @@ const router = new VueRouter({
                     name: 'loans',
                     component: Loans
                 },
-                {
-                    path: '/exportacion',
-                    name: 'exportacion',
-                    component: Exportacion
-                },
-                 
+                
 
 
                 

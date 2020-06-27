@@ -17,10 +17,7 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = Client::all();
-        return view('clients.index', [
-            'clients' => $clients,
-        ]);
+        return Response()->json(['clients'=> Client::all()],200);
     }
 
     /**
@@ -104,9 +101,5 @@ class ClientsController extends Controller
 
         return $client;
     }
-    public function export() 
-    {
-        return Excel::download(new UsersExport, 'users.xlsx');
-    }
-}
+    
 }
