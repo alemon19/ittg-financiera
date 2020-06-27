@@ -10,7 +10,7 @@
                         Importar Clientes
                     </div>
                     <div>
-                         <a href="{{ route('loans.create') }}" class="btn btn-danger">
+                         <a href="{{ route('export.index') }}" class="btn btn-danger">
                             {{__('Descargar')}}
                         </a>
                         
