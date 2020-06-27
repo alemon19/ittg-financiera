@@ -47,7 +47,7 @@ Route::view('/form','subir')
 Route::post('/upload','ClientsController@import');  
 Route::post('/import','ClientsController@import');
 
-Route::post('/export','ClientsController@export')
+Route::get('/export','ClientsController@export')
 ->name('export.index');
 
 
