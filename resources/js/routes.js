@@ -9,6 +9,7 @@ import View from '@/js/views/View';
 import Clients from '@/js/components/Clients';
 import Loans from '@/js/components/Loans';
 import Exportacion from '@/js/components/Exportacion';
+import Importacion from '@/js/components/Importacion';
 
 
 Vue.use(VueRouter);
@@ -45,6 +46,7 @@ const router = new VueRouter({
                     name: 'exportacion',
                     component: Exportacion
                 },
+                 
 
 
                 

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Export\ClientsExport
 
 class ClientsController extends Controller
 {
@@ -101,4 +104,9 @@ class ClientsController extends Controller
 
         return $client;
     }
+    public function export() 
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+    }
+}
 }
