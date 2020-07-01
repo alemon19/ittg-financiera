@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //Route::get('exportacion', 'ClientsController@export');
 Route::resource('clients', 'ClientsController@index')->middleware('auth:sanctum');
+Route::post('imports', 'ClientsController@import');
+
+

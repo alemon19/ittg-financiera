@@ -9,7 +9,7 @@ import View from '@/js/views/View';
 import Clients from '@/js/components/Clients';
 import Loans from '@/js/components/Loans';
 import Exportacion from '@/js/components/Exportacion';
-import Importacion from '@/js/components/Importacion';
+import Imports from '@/js/components/Imports';
 
 
 Vue.use(VueRouter);
@@ -40,6 +40,11 @@ const router = new VueRouter({
                     path: '/loans',
                     name: 'loans',
                     component: Loans
+                },
+                {
+                    path: '/imports',
+                    name: 'imports',
+                    component: Imports
                 },
                 
 

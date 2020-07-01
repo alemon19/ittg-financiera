@@ -1,7 +1,9 @@
 <template>
  
-	<form action="upload" method="POST" enctype="multipart/form-data">
+	<form action="upload" method="post" enctype="multipart/form-data">
 	<input type="file" name="lista"/>
+	{‌!! csrf_field() !!}
+
 	
 	<br>
 	<br>

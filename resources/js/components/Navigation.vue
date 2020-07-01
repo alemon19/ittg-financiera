@@ -27,6 +27,13 @@
             <v-list-item-title>Loans</v-list-item-title>
             </v-list-item>
 
+            <v-list-item dark to="/imports">
+            <!-- <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+            </v-list-item-icon> -->
+            <v-list-item-title>Import</v-list-item-title>
+            </v-list-item>
+
            
 
 
